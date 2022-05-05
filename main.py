@@ -47,14 +47,14 @@ async def start2(bot, msg):
     rndm = random.randint(1, 362)
     replymark = InlineKeyboardMarkup(button2)
     randum = await bot.get_messages(storage, message_ids=rndm)
-    await msg.reply(text="<b>" + randum.text + "</b>", reply_markup=replymark)
+    await msg.reply(text="<b>" + randum.text + "</b>")
 
 @bot.on_message(filters.command("pickupline") & filters.private)
 async def start3(bot, msg):
     rndm = random.randint(0, 362)
     replymark = InlineKeyboardMarkup(button2)
     randum = await bot.get_messages(storage, message_ids=rndm)
-    await msg.reply(text="<b>" + randum.text + "</b>", reply_markup=replymark)
+    await msg.reply(text="<b>" + randum.text + "</b>")
 
 @bot.on_message(filters.regex("GET PICKUP QUOTE") & filters.private)
 async def getz(bot, msg):
@@ -64,7 +64,7 @@ async def getz(bot, msg):
             rndm = random.randint(0, 362)
             randum = await bot.get_messages(storage, message_ids=rndm)
             replymark = InlineKeyboardMarkup(button2)
-            await msg.reply(text="<b>" + randum.text + "</b>", reply_markup=replymark)
+            await msg.reply(text="<b>" + randum.text + "</b>")
     except UserNotParticipant:
         text = force_message
         reply_markup = InlineKeyboardMarkup(force_but)

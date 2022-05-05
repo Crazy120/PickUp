@@ -1,1 +1,1 @@
-worker: python3 YazhiBot.py
+worker: python3 main.py
